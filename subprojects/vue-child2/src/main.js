@@ -4,10 +4,15 @@ import App from './App'
 import router from './router'
 
 const vueOptions = {
-    el: "#vue2",
+    el: "#vue-project2",
     router,
     render: h => h(App)
 };
+
+if (!window.singleSpaNavigate) { // 如果不是single-spa模式
+    delete vueOptions.el;
+    new Vue(vueOptions).$mount('#app');
+}
 
 // singleSpaVue包装一个vue微前端服务对象
 const vueLifecycles = singleSpaVue({

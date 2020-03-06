@@ -19,7 +19,7 @@
             </a>
           </a-menu-item>
         </a-sub-menu>
-        <!-- <a-sub-menu key="2">
+        <a-sub-menu key="2">
           <span slot="title">
             <a-icon type="user" />
             <span>Vue2</span>
@@ -34,7 +34,7 @@
               About
             </a>
           </a-menu-item>
-        </a-sub-menu> -->
+        </a-sub-menu>
       </a-menu>
     </a-layout-sider>
     <a-layout>
@@ -46,12 +46,9 @@
         />
       </a-layout-header>
       <a-layout-content :style="{ margin: '24px 16px', padding: '24px', background: '#fff', minHeight: '280px' }">
-        <div>
-          <div id="react-app"></div>
-          <div id="single-vue" class="single-spa-vue">
-            <div id="vue"></div>
-          </div>
-          <div id="angular-app"></div>
+        <div class="apps">
+          <div id="vue-project1"></div>
+          <div id="vue-project2"></div>
           <router-view :key="$route.path" />
         </div>
       </a-layout-content>
